@@ -1,0 +1,19 @@
+{
+    "name": "circli/encryption-extension",
+    "type": "circli-extension",
+    "authors": [
+        {
+            "name": "Andreas Sundqvist",
+            "email": "andreas@forme.se"
+        }
+    ],
+    "require": {
+        "paragonie/ciphersweet": "^1.7",
+        "paragonie/halite": "^4.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Circli\\Extensions\\Encryption\\": "src/"
+        }
+    }
+}
