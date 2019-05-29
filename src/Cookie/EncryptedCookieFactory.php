@@ -2,10 +2,10 @@
 
 namespace Circli\Extensions\Encryption\Cookie;
 
-use Circli\Extension\WebCore\Contracts\CookieFactory;
-use Circli\Extension\WebCore\Contracts\CookieInterface;
+use Circli\WebCore\Contracts\CookieInterface;
+use Circli\WebCore\Contracts\CookieFactory;
 
-class EncryptedCookieFactory implements CookieFactory
+final class EncryptedCookieFactory implements CookieFactory
 {
     public function getCookie(string $name): CookieInterface
     {

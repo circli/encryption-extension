@@ -2,7 +2,7 @@
 
 namespace Circli\Extensions\Encryption\Cookie;
 
-use Circli\Extension\WebCore\Contracts\CookieInterface;
+use Circli\WebCore\Contracts\CookieInterface;
 use ParagonIE\Halite\Cookie;
 
 final class EncryptedCookie implements CookieInterface

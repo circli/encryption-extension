@@ -4,10 +4,10 @@ namespace Circli\Extensions\Encryption;
 
 use ParagonIE\CipherSweet\EncryptedField;
 
-class CipherSweetFieldEncrypter implements FieldEncrypterInterface
+final class CipherSweetFieldEncrypter implements FieldEncrypterInterface
 {
     /** @var EncryptedField */
-    protected $encryptedField;
+    private $encryptedField;
 
     public function __construct(EncryptedField $encryptedField)
     {

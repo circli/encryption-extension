@@ -4,10 +4,10 @@ namespace Circli\Extensions\Encryption;
 
 use ParagonIE\CipherSweet\CipherSweet;
 
-class CipherSweetFieldEncrypterFactory implements FieldEncrypterFactoryInterface
+final class CipherSweetFieldEncrypterFactory implements FieldEncrypterFactoryInterface
 {
     /** @var CipherSweet */
-    protected $cipherSweet;
+    private $cipherSweet;
 
     public function __construct(CipherSweet $cipherSweet)
     {

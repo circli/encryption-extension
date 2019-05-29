@@ -7,11 +7,11 @@ use ParagonIE\Halite\HiddenString;
 use ParagonIE\Halite\KeyFactory as BaseFactory;
 use ParagonIE\Halite\Symmetric\EncryptionKey;
 
-class KeyFactory
+final class KeyFactory
 {
     private static $salt;
     
-    public static function setAccountSalt(string $salt)
+    public static function setAccountSalt(string $salt): void
     {
         self::$salt = $salt;
     }
@@ -19,11 +19,7 @@ class KeyFactory
     public static function deriveEncryptionKeyFromSecret(HiddenString $secret): EncryptionKey
     {
         if (!self::$salt) {
-            $q = new MissingSalt();
-            echo '<pre>';
-            echo json_encode($q->getTrace(), JSON_PRETTY_PRINT);
-            exit;
-            throw $q;
+            throw new MissingSalt();
         }
 
         return BaseFactory::deriveEncryptionKey($secret, self::$salt);

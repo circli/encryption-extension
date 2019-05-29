@@ -2,7 +2,7 @@
 
 namespace Circli\Extensions\Encryption;
 
-class NoneEncrypter implements FieldEncrypterInterface
+final class NoneEncrypter implements FieldEncrypterInterface
 {
     public function getBlindIndex(string $input)
     {
