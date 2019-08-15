@@ -57,7 +57,7 @@ final class EncryptedCookie implements CookieInterface
 
     public function delete(): bool
     {
-        return $this->cookie->store($this->name, '', -1);
+        return $this->cookie->store($this->name, '', time() - 3600);
     }
 
     public function save(): bool
